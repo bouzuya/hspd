@@ -1,0 +1,6 @@
+.hspd.cache.json
+.travis.yml
+coverage
+gulpfile.coffee
+src
+test
