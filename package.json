@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "A command-line tool for listing hubot-script-per-day",
   "main": "index.js",
+  "bin": {
+    "hspd": "./bin/hspd"
+  },
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
@@ -45,6 +48,7 @@
   },
   "dependencies": {
     "cheerio": "^0.17.0",
+    "commander-b": "^0.2.2",
     "es6-promise": "^1.0.0",
     "request": "^2.44.0"
   }

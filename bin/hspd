@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var commander = require('commander-b');
+var list = require('../');
+var path = require('path');
+
+var getVersion = function() {
+  var packageJsonPath = path.resolve(__dirname, './../package.json');
+  var packageJson = require(packageJsonPath);
+  return packageJson.version
+};
+
+var program = commander()
+  .version(getVersion())
+  .action(function() { return list(); })
+  .execute();

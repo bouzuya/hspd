@@ -15,5 +15,5 @@ output = (scripts) ->
       ]
   )
 
-scripts({})
-  .then output
+module.exports = ->
+  scripts({}).then(output)
