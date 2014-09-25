@@ -1,7 +1,7 @@
 {Promise} = require 'es6-promise'
 fs = require 'fs'
 bbn = require './loader/bbn'
-github = require './loader/github'
+githubLoader = require './loader/github'
 
 CACHE_FILE = '.hspd.cache.json'
 
@@ -21,8 +21,10 @@ save = (data) ->
 cached = ->
   fs.existsSync(cacheFile())
 
-module.exports = ({ force }) ->
+module.exports = ({ github, force }) ->
   if (force ? false) or !cached()
-    bbn().then(github).then(save)
+    bbn().then((scripts) ->
+      if github then githubLoader(scripts) else scripts
+    ).then(save)
   else
     load()

@@ -12,5 +12,9 @@ var getVersion = function() {
 
 var program = commander()
   .version(getVersion())
-  .action(function() { return list(); })
+  .option('-f, --force', 'load data without cache')
+  .option('-g, --github', 'load github data (deprecated & image)')
+  .action(function(options) {
+     return list(options);
+  })
   .execute();
