@@ -28,7 +28,7 @@ class Table
     .join ' \n'
 
   _str: (o) ->
-    o.toString()
+    o?.toString() ? ''
 
   _rpad: (s, l, p = ' ') ->
     s + [0...(l - s.length)].map(-> p).join('')

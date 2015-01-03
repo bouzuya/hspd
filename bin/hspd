@@ -14,6 +14,7 @@ var program = commander()
   .version(getVersion())
   .option('-f, --force', 'load data without cache')
   .option('-g, --github', 'load github data (deprecated & image)')
+  .option('--format <format>', 'format (table | json)')
   .action(function(options) {
      return list(options);
   })
