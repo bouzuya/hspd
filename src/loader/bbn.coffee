@@ -1,4 +1,4 @@
-request = require '../util/request-b'
+request = require 'request-b'
 
 fetch = ->
   request

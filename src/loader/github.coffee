@@ -1,5 +1,5 @@
 {Promise} = require 'es6-promise'
-request = require '../util/request-b'
+request = require 'request-b'
 timeout = require '../util/timeout'
 
 fetch = (script) ->

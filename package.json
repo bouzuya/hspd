@@ -47,9 +47,8 @@
     "sinon": "^1.10.3"
   },
   "dependencies": {
-    "cheerio": "^0.17.0",
     "commander-b": "^0.2.2",
     "es6-promise": "^1.0.0",
-    "request": "^2.44.0"
+    "request-b": "^1.0.0"
   }
 }
